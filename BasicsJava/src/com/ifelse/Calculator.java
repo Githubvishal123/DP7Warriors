@@ -7,49 +7,69 @@ public class Calculator {
 	System.out.println("Enter two number");
 	int num1=sc.nextInt();
 	int num2=sc.nextInt();
+	
 	System.out.println("Enter the Operation");
 	int choice=sc.nextInt();
+	char ch;
 	
-	if(choice==1)
+	do {
+		
+		System.out.println(" 1 for Addition");
+		System.out.println(" 2 for Subtraction");
+		System.out.println(" 3 for Multiplication");
+		System.out.println(" 4 for Division");
+	switch(choice)
 	{
-		System.out.println("addition :");
-	int add=num1+num2;
+	
+	
+	case 1 :System.out.println("addition :");
+		int add=num1+num2;
 		System.out.println(add);
+	break;
 	
-	}
-	else if(choice==2)
-	{
+
+	case 2 :
 		System.out.println("Subtraction");
 		int sub=num1-num2;
 		System.out.println(sub);
+		break;
 		
-	}
-	else if(choice==3)
-	{
+	
+	case 3:
+	
 		System.out.println("Multiplication");
 		int mult=num1*num2;
 		System.out.println(mult);
-		
-	}
+		break;
 	
-	else if(choice==4)
-	{
+	
+	case 4 :
+	
 		System.out.println("Division");
 		int div=num1%num2;
 		System.out.println(div);
+		break;
 		
-	}
 	
-	else
-	{System.out.println("Error input");
+	
+	default :
+		
+	System.out.println("Error input");
+	break;
+			
+	}
+		
+	System.out.println("Do u want to Continue press yes or no");
+	 ch=sc.next().charAt(0);
 	
 		
+}while(ch!='n');
 	}
-	
-	
-	
-	
-	
 	}
+		
+	
 
-}
+
+	
+
+
